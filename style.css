@@ -1,0 +1,28 @@
+body {
+	background: linear-gradient(-45deg, #ffffff, #c27575, #69ff4b, #c800fa);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: auto;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+.outputcss{
+    background-color: transparent;
+}
+#outputtext{
+	margin-top: 10px;
+	background-color: #ffffff;
+	height: auto;
+	padding: 10px;
+	
+}

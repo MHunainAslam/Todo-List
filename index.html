@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />    
+   <title>Todo List</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="text-bg-light p-3 text-center"><b data-aos="fade-up"> To-Do List</b></div>
+    </div>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <!-- <form action="" id="form-task"> -->
+                <div  data-aos="flip-right" class="card cardcss">
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <input type="text"  class="form-control" id="title" placeholder="Title">
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" id="desc" rows="7"
+                                placeholder="Description"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <button id="submit" style="width:100% ;"  class=" btn btn-success" type="button">SAVE</button>
+                        </div>
+                    </div>
+                </div>
+            <!-- </form> -->
+            </div>
+            <div class="col-md-8" >
+                <table class="table " data-aos="slide-left">
+                    <thead>
+                        <tr>
+                            <th class="col-sm-1 text-center">#</th>
+                            <th class="col-sm-2 text-center">Title</th>
+                            <th class="col-sm-7 text-center">Description</th>
+                            <th class="col-sm-2 text-center">Delete</th>
+                            
+
+                        </tr>
+                    </thead>
+
+
+                </table>
+                <div class="container">
+                    <div id="todooutput" style="margin-top: 10px;" class="row outputcss" data-aos="zoom-in-up">
+                        <div class="col-sm-1 text-center" id="outputtext">
+                            <p class="font-weight-bold">1</p>
+                        </div>
+                        <div class="col-sm-2  text-center" id="outputtext">
+                            <p class="font-weight-bold">${titlevar}</p>
+                        </div>
+                        <div class=" col-sm-7  text-center" id="outputtext">
+                            <p class="font-weight-bold">${descvar}</p>
+                        </div>
+                        <div class="col-sm-2 text-center" id="outputtext">
+                            <button type="button" id="dltbtn" class="btn btn-danger" style=" height: 40px; width: auto; margin-left:-3px; ">
+                                <img src="./img/39-trash-outline.gif"  style=" height: 100%; width: auto;  margin-top:-3px;" alt=""> 
+                            </button>
+                        </div>
+             
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+<script src="./script.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+
+// You can also pass an optional settings object
+// below listed default settings
+AOS.init({
+  // Global settings:
+  disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+  startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+  initClassName: 'aos-init', // class applied after initialization
+  animatedClassName: 'aos-animate', // class applied on animation
+  useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+  disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+  debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+  throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+  
+
+  // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+  offset: 170, // offset (in px) from the original trigger point
+  delay: 0, // values from 0 to 3000, with step 50ms
+  duration: 1500, // values from 0 to 3000, with step 50ms
+  easing: 'ease', // default easing for AOS animations
+  once: true, // whether animation should happen only once - while scrolling down
+  mirror: false, // whether elements should animate out while scrolling past them
+  anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+
+});
+</script>
+</html>
